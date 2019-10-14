@@ -2,7 +2,7 @@
 以下步驟說明如何安裝 logstash 到 iRSUs 內
 
 ## Requirements
-* UBUNTU 16.04
+* Ubuntu 16.04
 
 ## Install openJDK 1.8
 
@@ -30,3 +30,8 @@
 
 ## 測試
 
+    $ sudo /usr/share/logstash/bin/logstash -e 'input { stdin { } } output { stdout {} }'
+    // 等10秒鐘, 然後敲入 hello [按Enter]
+    // 如果有輸出類似以下內容, 就算成功了, 請按 [CTRL]+[D] 退出即可
+
+    2018-11-21T01:22:14.405+0000 0.0.0.0 hello
